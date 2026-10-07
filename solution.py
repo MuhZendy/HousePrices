@@ -19,7 +19,7 @@ from tensorflow.keras import layers
 from tensorflow.keras.callbacks import EarlyStopping
 
 # Setup
-X_full = pd.read_csv("train.csv", index_col='Id')
+X_full = pd.read_csv("data/train.csv", index_col='Id')
 X_full.dropna(axis=0, subset=["SalePrice"], inplace=True)
 y_full = X_full.pop("SalePrice")
 y_full = np.log1p(y_full)
